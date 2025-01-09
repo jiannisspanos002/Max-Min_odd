@@ -5,7 +5,7 @@ const postRequest = new PostRequest();
 const reading = new Reading();
 const writeFile = new WriteFile();
 writeFile.writeFileMethod(
-  "http://proxy.sm.prod.skill90.io:3456//api/fixture/validatorCache",
+  "",
   "./paok.json"
 );
 postRequest.PostRequest("proxy.sm.prod.skill90.io");

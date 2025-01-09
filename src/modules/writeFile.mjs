@@ -21,7 +21,7 @@ class WriteFile {
         }
       })
       .on("error", (err) => {
-        console.error("Error downloading file:");
+        console.error("Error downloading file:",err.message);
       });
   }
 }
