@@ -1,10 +1,10 @@
-import https from "https"; 
+import http from "http"; 
 import fs from "fs";       
 class WriteFile {
   constructor() {}
 
   writeFileMethod(url, filePath) {
-    https
+    http
       .get(url, (response) => {
         if (response.statusCode === 200) {
           const file = fs.createWriteStream(filePath);

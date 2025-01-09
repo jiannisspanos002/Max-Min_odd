@@ -1,4 +1,4 @@
-import https from "https"; 
+import http from "http"; 
 class PostRequest {
   constructor() {}
 
@@ -20,7 +20,7 @@ class PostRequest {
       },
     };
 
-    const req = https.request(options, (res) => {
+    const req = http.request(options, (res) => {
       let responseData = "";
 
       res.on("data", (chunk) => {
