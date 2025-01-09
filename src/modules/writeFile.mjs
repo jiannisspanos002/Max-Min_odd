@@ -8,6 +8,7 @@ class WriteFile {
       .get(url, (response) => {
         if (response.statusCode === 200) {
           const file = fs.createWriteStream(filePath);
+          console.log(file)
           response.pipe(file);
 
           file.on("finish", () => {
