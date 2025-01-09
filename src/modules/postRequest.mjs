@@ -12,7 +12,8 @@ class PostRequest {
 
     const options = {
       hostname: url,
-      path: "/",
+      port:3456,
+      path: "/api/fixture/validatorCache",
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -29,7 +30,7 @@ class PostRequest {
 
       res.on("end", () => {
         if (res.statusCode === 200) {
-          console.log("Response Data:", responseData);
+          console.log("Response Data:", );
         } else {
           console.error(
             `Failed to get a valid response. Status code: ${res.statusCode}`

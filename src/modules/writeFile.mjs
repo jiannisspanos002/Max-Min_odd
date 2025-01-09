@@ -3,12 +3,11 @@ import fs from "fs";
 class WriteFile {
   constructor() {}
 
-  writeFileMethod(url, filePath) {
+  writeFileMethod(url,filePath) {
     http
       .get(url, (response) => {
         if (response.statusCode === 200) {
           const file = fs.createWriteStream(filePath);
-          console.log(file)
           response.pipe(file);
 
           file.on("finish", () => {
@@ -22,7 +21,7 @@ class WriteFile {
         }
       })
       .on("error", (err) => {
-        console.error("Error downloading file:", err.message);
+        console.error("Error downloading file:");
       });
   }
 }

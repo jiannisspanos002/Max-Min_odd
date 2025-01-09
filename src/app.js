@@ -1,16 +1,13 @@
-
 import { default as PostRequest } from "./modules/postRequest.mjs";
 import { default as WriteFile } from "./modules/writeFile.mjs";
 import Reading from "./modules/readFile.mjs";
 const postRequest = new PostRequest();
-const reading=new Reading()
+const reading = new Reading();
 const writeFile = new WriteFile();
 writeFile.writeFileMethod(
   "http://proxy.sm.prod.skill90.io:3456//api/fixture/validatorCache",
-  "../paok.json"
+  "./paok.json"
 );
-postRequest.PostRequest(
-  "http://proxy.sm.prod.skill90.io:3456//api/fixture/validatorCache"
-);
+postRequest.PostRequest("proxy.sm.prod.skill90.io");
 
-reading.readFile()
+//reading.readFile()
