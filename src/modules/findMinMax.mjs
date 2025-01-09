@@ -1,7 +1,7 @@
 class Iteration {
   constructor() {}
 
-  finMinMax(markets) {
+  findMinMax(markets) {
     if (!markets) {
       console.error("Markets data not found!");
       return;
@@ -28,4 +28,4 @@ class Iteration {
   }
 }
 
-export default Iteration;
+export default Iteration
